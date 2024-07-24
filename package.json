@@ -1,12 +1,11 @@
 {
   "name": "odoc_editor_v2",
-  "version": "0.2.12",
-  "main": "dist/cjs/components/pages/editor.js",
-  "module": "dist/esm/main.js",
-  "types": "dist/esm/components/pages/editor.d.ts",
+  "version": "0.2.34",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "dist",
-    "README.md"
+    "dist"
   ],
   "scripts": {
     "clean": "rm -rf dist",
@@ -143,8 +142,8 @@
     "@types/lodash": "^4",
     "@types/node": "^20.11.25",
     "@types/prismjs": "^1",
-    "@types/react": "^18.2.55",
-    "@types/react-dom": "^18.2.19",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "@vitejs/plugin-react": "^4.2.1",
@@ -155,8 +154,7 @@
     "eslint-plugin-storybook": "^0.8.0",
     "esm": "^3.2.25",
     "postcss": "^8.4.39",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
@@ -183,9 +181,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   }
 }

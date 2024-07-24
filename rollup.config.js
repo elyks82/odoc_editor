@@ -6,16 +6,16 @@ import external from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import json from '@rollup/plugin-json';
 import alias from '@rollup/plugin-alias';
-const packageJson = require('./package.json');
+import packageJson from './package.json';
+import { dts } from "rollup-plugin-dts";
 
-export default {
-  input: './src/components/pages/editor.tsx',
+export default [{
+  input: 'src/index.tsx',
   output: [
     {
       file: packageJson.main,
       format: 'cjs',
       sourcemap: true,
-      name: 'react-lib',
       inlineDynamicImports: true,
     },
     {
@@ -39,4 +39,11 @@ export default {
     postcss(),
     terser()
   ]
-}
+},
+  {
+    input: 'dist/esm/types/index.d.ts',
+    output: [{file: 'dist/index.d.ts', format: 'esm'}],
+    plugins: [dts()],
+    external: [/\.css$/],
+  },
+]
