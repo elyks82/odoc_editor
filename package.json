@@ -1,5 +1,8 @@
 {
-  "name": "odoc_editor_v2",
+  "name": "@elyks82/odoc_editor",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/elyks82"
+  },
   "version": "0.2.34",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
